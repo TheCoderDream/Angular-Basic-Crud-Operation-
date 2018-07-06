@@ -1,3 +1,6 @@
+![alt text](https://github.com/TheCodersDream/Angular-Basic-Crud-Operation-/blob/master/Screenshot_23.png)
+![alt text](https://github.com/TheCodersDream/Angular-Basic-Crud-Operation-/blob/master/Screenshot_24.png)
+
 # TopAnimes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
