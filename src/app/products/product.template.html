@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="col-md-12">
+    <h1>Product List</h1>
+      <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th class="text-center">ID</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Description</th>
+        <th class="text-center">Price</th>
+        <th class="text-center">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of products">
+        <td>{{prod.id}}</td>
+        <td>{{prod.id}}</td>
+        <td>{{prod.description}}</td>
+        <td>{{prod.price | currency: 'TL'}}</td>
+        <td>
+          <button class="btn btn-info"
+                        (click)="onEditProduct(prod)">
+                       <i class="fa fa-edit"></i>
+              </button>
+          <button class="btn btn-danger"
+                       (click)="onRemoveProduct(prod)">
+                       <i class="fa fa-minus"></i>
+            </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-success"
+               (click)="showAddProductForm()"><i class="fa fa-plus"></i></button>
+  <br />
+  <br />
+
+    <app-product-edit [editedProduct]="selectedProduct" *ngIf="selectedProduct" (cancelEdit)="cancelEdit($event)"></app-product-edit>
+    <app-new-product></app-new-product>
+
+
+  </div>
+</div>
